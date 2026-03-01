@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotinhas da Alice - Registo Mensal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="p-4 md:p-6">
+    <div
+      class="max-w-2xl mx-auto bg-white p-6 rounded-3xl shadow-xl print-container relative overflow-hidden"
+    >
+      <!-- Elementos Decorativos -->
+      <div
+        class="absolute -top-10 -right-10 w-40 h-40 bg-pink-100 rounded-full opacity-50"
+      ></div>
+      <div
+        class="absolute -bottom-10 -left-10 w-32 h-32 bg-pink-50 rounded-full opacity-50"
+      ></div>
+
+      <!-- Cabeçalho -->
+      <div class="text-center mb-2 relative header-info">
+        <h1 class="text-4xl text-pink-500 title-font mb-1"
+          >Gotinhas da Alice</h1
+        >
+
+        <div id="status-header">
+          <p class="text-gray-400 italic text-xs no-print"
+            >Selecionar o mês para gerar a tabela de controlo</p
+          >
+        </div>
+
+        <!-- Seletor de Mês -->
+        <div class="no-print mt-4">
+          <select
+            id="month-select"
+            onchange="selectMonth()"
+            class="bg-pink-50 border border-pink-200 text-pink-700 text-md rounded-xl focus:ring-pink-500 focus:border-pink-500 p-2 cursor-pointer shadow-sm"
+          >
+            <option value="" disabled selected>Escolher mês...</option>
+            <option value="0">Janeiro</option>
+            <option value="1">Fevereiro</option>
+            <option value="2">Março</option>
+            <option value="3">Abril</option>
+            <option value="4">Maio</option>
+            <option value="5">Junho</option>
+            <option value="6">Julho</option>
+            <option value="7">Agosto</option>
+            <option value="8">Setembro</option>
+            <option value="9">Outubro</option>
+            <option value="10">Novembro</option>
+            <option value="11">Dezembro</option>
+          </select>
+        </div>
+
+        <div class="flex justify-center mt-2 space-x-6">
+          <span class="text-xl text-pink-300">🌸</span>
+          <span class="text-xl text-blue-200">☁️</span>
+          <span class="text-xl text-yellow-200">✨</span>
+        </div>
+      </div>
+
+      <!-- Contentor da Tabela -->
+      <div id="container-table" class="hidden border-t-2 border-pink-100 mt-1">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="text-pink-600 border-b border-pink-100">
+              <th class="py-1 px-2 w-20 text-md align-middle">Dia</th>
+              <th class="py-1 px-2 text-center align-middle">
+                <div class="text-md font-bold">🛀 Banho</div>
+                <div class="text-[9px] text-pink-400 font-normal leading-none"
+                  >(dia sim/dia não)</div
+                >
+              </th>
+              <th class="py-1 px-2 text-center align-middle">
+                <div class="text-md font-bold">💧 BioGaia</div>
+                <div class="text-[9px] text-pink-400 font-normal leading-none"
+                  >(5 gotas)</div
+                >
+              </th>
+              <th class="py-1 px-2 text-center align-middle">
+                <div class="text-md font-bold">☀️ Nancare</div>
+                <div class="text-[9px] text-pink-400 font-normal leading-none"
+                  >(2 gotas)</div
+                >
+              </th>
+              <th class="py-1 px-2 text-center align-middle">
+                <div class="text-md font-bold">💪 Ferro</div>
+                <div class="text-[9px] text-pink-400 font-normal leading-none"
+                  >(15 gotas)</div
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Gerado por JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Rodapé -->
+      <div
+        id="footer-actions"
+        class="mt-2 flex justify-between items-end hidden footer-margin"
+      >
+        <div
+          id="custom-message"
+          class="text-xs text-pink-400 italic font-bold max-w-[70%]"
+        >
+          <!-- Mensagem dinâmica -->
+        </div>
+        <div class="no-print">
+          <button
+            onclick="window.print()"
+            class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all transform hover:scale-105 inline-flex items-center text-sm"
+          >
+            <svg
+              class="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+              ></path>
+            </svg>
+            Imprimir
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts.js"></script>
+  </body>
+</html>

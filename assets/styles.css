@@ -1,0 +1,77 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff5f8;
+}
+.title-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Cursor pointer global para elementos interativos */
+select,
+option,
+button,
+.checkbox-custom {
+  cursor: pointer !important;
+}
+
+/* Configurações específicas para impressão em A4 */
+@media print {
+  @page {
+    size: A4;
+    margin: 0.5cm 0.8cm;
+  }
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print-container {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0.2cm 0.4cm !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+  }
+  table {
+    page-break-inside: auto;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* Ajuste drástico para caber 31 days + rodapé numa única folha */
+  .row-day-cell {
+    padding-top: 5px !important;
+    padding-bottom: 2px !important;
+    line-height: 1 !important;
+  }
+  .checkbox-custom {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .header-info {
+    margin-bottom: 0.5rem !important;
+  }
+  .footer-margin {
+    margin-top: 0.5rem !important;
+  }
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f9a8d4;
+  border-radius: 50%;
+  display: inline-block;
+}
