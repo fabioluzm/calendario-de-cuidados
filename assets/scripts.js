@@ -69,6 +69,7 @@ const tableColumns = [
   { icon: '💧', title: 'BioGaia', subtitle: '5 gotas' },
   { icon: '☀️', title: 'Nancare', subtitle: '2 gotas' },
   { icon: '💪', title: 'Ferro', subtitle: '15 gotas' },
+  { icon: '🙌', title: 'Massagem', subtitle: 'colicas/cocó' },
 ];
 
 function leapYear(year) {
