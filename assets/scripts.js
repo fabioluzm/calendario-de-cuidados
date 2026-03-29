@@ -67,11 +67,6 @@ const monthData = {
 // Columns can have either a `subtitle` (string) or `subcolumns` (array of objects)
 const tableColumns = [
   {
-    icon: '',
-    title: '',
-    subcolumns: [{ icon: '🛀', title: 'Banho', subtitle: 'dia sim/dia não' }],
-  },
-  {
     icon: '💦',
     title: 'Gotas',
     subcolumns: [
@@ -84,11 +79,6 @@ const tableColumns = [
         icon: '☀️',
         title: 'Nancare',
         subtitle: '2/dia',
-      },
-      {
-        icon: '💪',
-        title: 'Ferro',
-        subtitle: '15/dia',
       },
     ],
   },
@@ -106,6 +96,14 @@ const tableColumns = [
         title: 'relax',
         subtitle: 'relaxante',
       },
+    ],
+  },
+  {
+    icon: '✨',
+    title: 'Limpeza',
+    subcolumns: [
+      { icon: '🦷', title: 'Dente', subtitle: 'Diariamente' },
+      { icon: '🛀', title: 'Banho', subtitle: 'dia sim/dia não' },
     ],
   },
 ];
