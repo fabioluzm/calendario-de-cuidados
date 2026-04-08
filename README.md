@@ -1,6 +1,6 @@
-# Calendario Gotas
+# Daily Care
 
-A small, client-side calendar web app for tracking scheduled eye-drop (gotas) reminders. This repo contains a minimal HTML/CSS/JS project intended to run locally in the browser.
+A small, client-side calendar web app for tracking scheduled daily routines. This repo contains a minimal HTML/CSS/JS project intended to run locally in the browser.
 
 **Features**
 
