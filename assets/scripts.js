@@ -145,7 +145,7 @@ function selectMonth() {
   }
 
   document.getElementById('status-header').innerHTML =
-    `<p class="text-gray-500 font-bold uppercase tracking-widest text-xs italic leading-none">Controlo de Vitaminas • ${month}</p>`;
+    `<p class="text-gray-500 font-bold uppercase tracking-widest text-xs italic leading-none">Controlo de Cuidados • ${month}</p>`;
   document.getElementById('custom-message').innerText = footerMessage;
   document.getElementById('container-table').classList.remove('hidden');
   document.getElementById('footer-actions').classList.remove('hidden');
