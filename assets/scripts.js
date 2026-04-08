@@ -88,13 +88,13 @@ const tableColumns = [
     subcolumns: [
       {
         icon: '💨',
-        title: 'colicas',
-        subtitle: 'anti-ciclonicas',
+        title: 'Cólicas',
+        subtitle: 'Anti-ciclonicas',
       },
       {
         icon: '🌙',
-        title: 'relax',
-        subtitle: 'relaxante',
+        title: 'Relax',
+        subtitle: 'Relaxante',
       },
     ],
   },
@@ -103,7 +103,7 @@ const tableColumns = [
     title: 'Limpeza',
     subcolumns: [
       { icon: '🦷', title: 'Dente', subtitle: 'Diariamente' },
-      { icon: '🛀', title: 'Banho', subtitle: 'dia sim/dia não' },
+      { icon: '🛀', title: 'Banho', subtitle: 'Dia sim/dia não' },
     ],
   },
 ];
