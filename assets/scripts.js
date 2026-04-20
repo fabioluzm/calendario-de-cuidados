@@ -67,6 +67,14 @@ const monthData = {
 // Columns can have either a `subtitle` (string) or `subcolumns` (array of objects)
 const tableColumns = [
   {
+    icon: '✨',
+    title: 'Limpeza',
+    subcolumns: [
+      { icon: '🛀', title: 'Banho', subtitle: 'Dia sim/dia não' },
+      { icon: '🦷', title: 'Dente', subtitle: 'Diariamente' },
+    ],
+  },
+  {
     icon: '💦',
     title: 'Gotas',
     subcolumns: [
@@ -96,14 +104,6 @@ const tableColumns = [
         title: 'Relax',
         subtitle: 'Relaxante',
       },
-    ],
-  },
-  {
-    icon: '✨',
-    title: 'Limpeza',
-    subcolumns: [
-      { icon: '🦷', title: 'Dente', subtitle: 'Diariamente' },
-      { icon: '🛀', title: 'Banho', subtitle: 'Dia sim/dia não' },
     ],
   },
 ];
@@ -145,7 +145,7 @@ function selectMonth() {
   }
 
   document.getElementById('status-header').innerHTML =
-    `<p class="text-gray-500 font-bold uppercase tracking-widest text-xs italic leading-none">Controlo de Cuidados • ${month}</p>`;
+    `<p class="text-gray-500 font-bold uppercase tracking-widest text-xs italic leading-none">Controlo de Cuidados • ${month}, ${currentYear}</p>`;
   document.getElementById('custom-message').innerText = footerMessage;
   document.getElementById('container-table').classList.remove('hidden');
   document.getElementById('footer-actions').classList.remove('hidden');
